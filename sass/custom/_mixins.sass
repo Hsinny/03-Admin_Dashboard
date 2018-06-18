@@ -1,0 +1,48 @@
+/*------------------------------------*/
+/*  Variable                       
+/*------------------------------------*/
+
+
+
+/*------------------------------------*/
+/*  Mixin                      
+/*------------------------------------*/
+=size($width, $height: $width)
+  width:  $width
+  height: $height
+
+=width($width-percent,$vertical-align:top)
+  width: $width-percent
+  vertical-align: $vertical-align
+
+=flex($justify-content: center, $align-items: center)
+  display: flex
+  justify-content: $justify-content
+  align-items: $align-items
+
+=vertical-align($vertical-align: middle)
+  vertical-align: $vertical-align
+
+=btn($color: $white, $bg:$gray)
+  color: $color
+  background-color: $bg
+  font-size: 18px
+  font-weight: 400
+  letter-spacing: 2px
+  border: 0
+  padding: 10px 15px
+  transition: 1s
+  &:hover
+    background-color: darken($bg,10%)
+    transition: 1s
+
+=color($color: $black, $bg: $white)
+  color: $color
+  background-color: $bg
+
+/*------------------------------------*/
+/*  Common      
+/*------------------------------------*/
+
+.flex-space-between
+  +flex(space-between)
