@@ -1,0 +1,30 @@
+.page-content-wrapper
+  padding: 16px
+  margin-left: $menu-margin 
+
+@media (max-width: 575px)
+  .page-content-wrapper
+    margin-left: 0
+
+
+.card-income
+  .card-body
+    display: flex
+    justify-content: space-between
+  .card-title
+    font-size: 16px
+  .card-subtitle
+    font-size: 28px
+    font-family: sans-serif
+    font-weight: 300
+    line-height: 35px
+
+.card-header
+  +color($gray-700,transparent)
+  font-size: 1rem
+  font-weight: 500
+  border-bottom: 1px solid $gray-200
+
+/* Plugin DataTables */
+.dataTables_wrapper
+  overflow: scroll

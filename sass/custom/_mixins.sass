@@ -1,8 +1,11 @@
 /*------------------------------------*/
 /*  Variable                       
 /*------------------------------------*/
+$menu-margin: 80px
 
-
+// $navbar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+// .navbar-toggler-icon 
+//   background-image: $navbar-dark-toggler-icon-bg
 
 /*------------------------------------*/
 /*  Mixin                      
@@ -11,14 +14,18 @@
   width:  $width
   height: $height
 
-=width($width-percent,$vertical-align:top)
-  width: $width-percent
-  vertical-align: $vertical-align
+=color($color: $black, $bg: $white)
+  color: $color
+  background-color: $bg
 
 =flex($justify-content: center, $align-items: center)
   display: flex
   justify-content: $justify-content
   align-items: $align-items
+
+=width($width-percent,$vertical-align:top)
+  width: $width-percent
+  vertical-align: $vertical-align
 
 =vertical-align($vertical-align: middle)
   vertical-align: $vertical-align
@@ -36,9 +43,12 @@
     background-color: darken($bg,10%)
     transition: 1s
 
-=color($color: $black, $bg: $white)
-  color: $color
-  background-color: $bg
+// 元素右距
+=mr($mr:1)
+  margin-right: $mr * 8px
+
+
+
 
 /*------------------------------------*/
 /*  Common      

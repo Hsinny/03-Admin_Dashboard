@@ -1,3 +1,106 @@
 /*------------------------------------*/
 /*  Navigation     
 /*------------------------------------*/
+
+.navbar 
+  +size(290px,100%)
+  max-width: 290px
+  letter-spacing: 1px
+  align-items: flex-start
+  padding: 0
+  position: fixed
+  transform: translateX(-210px)
+  transition: 1s
+  z-index: 9999
+  &:hover
+    transform: translateX(0)
+    transition: 1s
+  // navbar Logo
+  .navbar-brand
+    +size(100%, 60px)
+    background-color: $gray-900
+    display: flex
+    vertical-align: middle
+    padding: 16px
+  .brand-name
+    margin-left: 16px
+  // nav-item
+  .nav-item
+    width: 100% 
+    margin-bottom: 8px
+    .nav-link
+      display: inline-block
+    .nav-icon
+      +size(40px)
+      +color($gray-600, $gray-900)
+      display: inline-block
+      font-size: 20px
+      line-height: 40px
+      text-align: center
+      float: right
+    &.active
+      .nav-icon
+        +color($white, $success)
+
+.navbar-collapse 
+  width: 100%
+  align-items: flex-start
+  padding: 24px
+
+@media (min-width: 992px)
+  .navbar-expand-lg 
+    flex-direction: column
+    .navbar-nav
+      width: 100% 
+      flex-direction: column
+
+  
+.header
+  background-color: $gray-100
+  border-bottom: 1px solid $gray-200
+  padding: 16px
+  margin-left: $menu-margin 
+  form 
+    display: inline-block
+  .admin
+    display: block
+    text-align: right
+    .dropdown
+      display: inline-block
+  .navbar-brand img
+    +mr(1) 
+  .brand-name
+    color: $gray-800
+    font-weight: 700
+  .input-search
+    +color($gray-800,transparent)
+    +size(350px,41px)
+    border: 
+      top: 0
+      right: 0
+      left: 0
+    border-radius: 0
+    &[type=search]
+      background-image: url(../images/icon-search-01-whiteBg.svg)
+      background-repeat: no-repeat
+      background-size: 20px
+      background-position: 0px 12px
+      padding: 
+        bottom: 5px
+        left: 35px
+    &::placeholder,&:focus
+      +color('',transparent)
+
+
+  .admin-name
+    font-weight: 400
+    +mr(1)
+  .admin-photo img
+    +mr(1)
+    border-radius: 50%
+
+@media (max-width: 575px)
+  .navbar 
+    display: none
+  .header
+    margin-left: 0
